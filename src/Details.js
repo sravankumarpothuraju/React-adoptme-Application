@@ -8,7 +8,6 @@ class Details extends React.Component {
   state = { loading: true };
 
   componentDidMount() {
-    throw new Error("hihow r u")
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
         name: animal.name,
