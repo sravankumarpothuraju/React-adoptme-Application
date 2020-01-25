@@ -5,17 +5,19 @@
   "main": "src/App.js",
   "scripts": {
     "build": "parcel build --public-url ./dist/ src/index.html",
+    "clear-build-cache": "rm -rf .cache/ dist/",
     "dev": "parcel src/index.html",
     "dev:mock": "cross-env PET_MOCK=mock parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,html}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet",
-    "start": "npm run build &&babel-node server/index.js",
+    "start": "npm -s run build && babel-node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/node": "^7.8.3",
     "@emotion/babel-preset-css-prop": "^10.0.27",
     "@emotion/core": "^10.0.27",
     "@frontendmasters/pet": "^1.0.3",
@@ -39,7 +41,8 @@
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
-    "eslint-plugin-react-hooks": "^2.3.0"
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "typescript": "^3.7.5"
   },
   "browserslist": [
     "last 2 Chrome versions"
