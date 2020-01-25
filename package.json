@@ -2,7 +2,7 @@
   "name": "adopt-me",
   "version": "1.0.0",
   "description": "",
-  "main": "src/App.js",
+  "main": "src/App.tsx",
   "scripts": {
     "build": "parcel build --public-url ./dist/ src/index.html",
     "clear-build-cache": "rm -rf .cache/ dist/",
